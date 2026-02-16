@@ -49,6 +49,6 @@ Each log entry has to have a timestamp in one of the following formats:
   - The timezone name format specifier (%Z) is not supported currently.
 
 When creating a VRL script, identify the primary timestamp of the log entries and its format.
-If the primary timestamp is already in a supported format, specify the name of the timestamp field in your output.
+If the primary timestamp is already in a supported format, specify the name of the timestamp field and the format in your output and do not change or format it in any way.
 In the case where the timestamp is not in a supported format, make the script add a field containing the timestamp in a supported format. The new field name should be `timestamp` when such a field doesn't already exist.
 make sure to mention the format of the timestamp in the timestamp field. if the timestamp if strptime format, also mention the format string.
