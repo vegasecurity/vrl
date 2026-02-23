@@ -33,6 +33,14 @@ Try to make the VRL script as efficient as possible:
 - Arguments to functions in VRL are passed on by-value as opposed to by-reference - making it very inefficient.
   - eg. using `push` inside of a `for_each` clones the entire array each time you reference it when calling `push` - `**NEVER** do this
   - use `map_values` or `filter` as alternatives
+- When possible, use built-in functions to parse common log formats such as:
+  - `parse_syslog`
+  - `parse_cef`
+  - `parse_glog`
+  - `parse_aws_alb_log`
+  - `parse_linux_authorization`
+  - `parse_csv`
+    search the code base for the matching function according to the log format.
 
 # Timestamp Parsing
 
